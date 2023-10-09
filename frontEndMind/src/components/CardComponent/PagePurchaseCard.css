@@ -1,0 +1,22 @@
+/* Card.css */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 46px !important;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 19%;
+    height: 208px !important;
+    background-color: #ECF0F4 !important;
+    padding: 26px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 14px;
+  }
+  
+  .card-content {
+    font-size: 1em;
+
+  }

@@ -1,0 +1,118 @@
+.role{
+    background: blue;
+}
+
+.classi__menu_item{
+    /* border: 1px solid red; */
+    height: 58px;
+    width: 60%;
+    margin-top: 46px;
+    margin-left: 21%;
+    position: absolute;
+}
+/* =========menu bar style========= */
+.menu {
+    /* background-color: #333; */
+    /* padding: 16px; */
+    padding: none;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    display: inline;
+    margin-right: 32px;
+    /* background: #ffff;
+    padding: 10px;
+    border-radius: 10px; */
+  }
+  
+  .menu-item a {
+    /* color: white; */
+    text-decoration: none;
+  }
+  
+  .menu-item a:hover {
+    color: #f0f0f0;
+  }
+  .main__pages_purchase_upload{
+    /* border: 1px solid red; */
+    height: 210px;
+    width: 75%;
+    margin-top: 130px;
+    margin-left: 21%;
+    position: absolute;
+    display: flex;
+  }
+.main__dash_contentDiv_displayData{
+  display: flex;
+    /* padding: 10px; */
+    /* padding-left: 65px; */
+    padding: 0px 65px 0px 65px;
+}
+.main__dash_pageProcess{
+  /* background: aqua; */
+  height: 228px;
+  width: 22%;
+  /* padding: 20px; */
+  margin: 25px;
+}
+.main__dash_pageUpload{
+  background: aqua;
+  height: 186.99px;
+  width: 265px;
+  /* padding: 20px; */
+  margin: 25px;
+}
+.main__dash_Accuracy{
+  background: aqua;
+  height: 186.99px;
+  width: 265px;
+  /* padding: 20px; */
+  margin: 25px;
+}
+.main__dash_straightProcessing{
+  background: aqua;
+  height: 186.99px;
+  width: 265px;
+  /* padding: 20px; */
+  margin: 25px;
+}
+.sub_page__process_background{
+  height: 100px;
+  width: 100px;
+  /* border: 1px solid red; */
+  margin: 0px 0px 0px 64px;
+  border-radius: 50%;
+  background: #E2E6FF;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.sub_parcent_div{
+  font-size: 22px;
+  font-weight: 600;
+  width: 64px;
+}
+.sub_parcent_title{
+  font-size: 18px;
+  color: #8F95B2;
+}
+.page__heading{
+  text-align: center;
+  color: #8995A7;
+  font-size: 20px;
+  margin-top: 24px;
+  /* width: 100%; */
+  font-weight: 500;
+}
+.pageAmount{
+  text-align: center;
+  color: #8995A7;
+  font-size: 26px;
+  margin-top: 16px;
+}
+  

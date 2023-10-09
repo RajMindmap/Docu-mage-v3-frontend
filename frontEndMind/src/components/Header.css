@@ -1,0 +1,30 @@
+.profile_cont_right{
+    display:flex;
+}
+.user_profile_img{
+    background-color: #B998FF;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+.personal_detail{
+    line-height: 0px;
+    margin-left: 10px;
+}
+.personal_detail h3{
+    height: 24px;
+    width: 116px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #111827;
+    
+
+}
+.standard__user p{
+    margin:0px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(113, 128, 150);
+
+}

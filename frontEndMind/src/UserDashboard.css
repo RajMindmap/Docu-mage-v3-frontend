@@ -1,0 +1,76 @@
+.hello{
+    /* background-color:blue; */
+    margin-top: 50px;
+}
+.mindmap__doc_main{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    position: absolute;
+    width: 72%;
+    padding: 33px 0px 0px 27px;
+}
+.pages_purchased{
+    background: #FFFFFF;
+    width: 248px;
+    height: 87px;
+    border-radius: 37px;
+    cursor: pointer;
+}
+.pages_uploaded{
+    background: #FFFFFF;
+    width: 248px;
+    height: 87px;
+    border-radius: 37px;
+    margin-top: 37px;
+    cursor: pointer;  
+}
+.pages_purchase_image{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+.pages_upload_image{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+.main2_boto_doc_cont{
+    /* border: "1px solid black", */
+        height: 236px;
+        margin: 30px 60px 30px 30px;
+        border-radius: 16px;
+        background:linear-gradient(91.9deg, #EFE8FF -0.11%, #E5EEFB 100.59%);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width:94%;
+}
+.input_your_question{
+    height: 44px;
+    border-radius: 12px !important;
+}
+.ask__submit_question {
+    background: linear-gradient(91.56deg, #B998FF 0%, #A2CFFF 104.01%);
+    border-radius: 12px;
+    height: 44px;
+    margin-top: 26px;
+    width: 148px;
+}
+.reduction_menu_msg_active{
+    margin-top: 10rem;
+    /* background: blue; */
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: linear-gradient(96.19deg, #B998FF -2.71%, #ACCDFF 110.39%);
+    padding: 10px;
+
+} 
+.vertical-buttons-container {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* width: 130px; */
+    margin-top: 10px;
+    margin-left: 130px;
+    position: absolute;
+  }

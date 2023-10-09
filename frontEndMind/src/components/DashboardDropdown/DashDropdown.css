@@ -1,0 +1,31 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-button {
+    padding: 10px 20px;
+    /* width: 86rem !important; */
+    width: 96% !important;
+    margin-left: 21px;
+    background: #ffff;
+    border-radius: 8px;
+    /* text-decoration: none; */
+    text-align: inherit;
+    /* background: #718096; */
+    color: #718096;
+    border: none;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-content.show {
+    display: block;
+  }
+  
