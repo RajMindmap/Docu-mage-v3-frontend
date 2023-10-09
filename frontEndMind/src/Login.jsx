@@ -30,7 +30,7 @@ function Login() {
       .post("http://localhost:8081", values)
       .then((res) => {
         if (res.data.Status === "Success") {
-          navigate("/docu-mege-v3");
+          navigate("/docu-mage-v3");
         } else {
           alert(res.data.Message);
         }

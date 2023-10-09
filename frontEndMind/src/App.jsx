@@ -1,7 +1,7 @@
 // import './App.css'
 import Home from './Home';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import UserDashboard from './UserDashboard'
+import DocuMageV3 from './DocuMageV3'
 import Dashboard from './Dashboard'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/docu-mege-v3' element={<UserDashboard />}></Route>
+        <Route path='/docu-mage-v3' element={<DocuMageV3 />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
 
 

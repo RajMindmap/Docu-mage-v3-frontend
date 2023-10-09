@@ -1,5 +1,5 @@
 // import React from 'react'
-import "./UserDashboard.css";
+import "./DocuMageV3.css";
 import Header from "./components/Header";
 import MaskGroup from "./assets/mask-group.png";
 import MaskWhiteGroup from "./assets/mask-white.png";
@@ -12,7 +12,7 @@ import MsgIcon from "./assets/msg-icon.png";
 import TowerChartIcont from "./assets/Chart.png";
 import { useState } from "react";
 
-function UserDashboard() {
+function DocuMageV3() {
   const [buttonCount, setButtonCount] = useState(1);
 
   const createButtons = () => {
@@ -398,7 +398,7 @@ function UserDashboard() {
             </tbody>
           </table>
 
-          <button>Download</button>
+          <button className="summery__dataDownlad">Download</button>
           
         </div>
       </div>
@@ -406,4 +406,4 @@ function UserDashboard() {
   );
 }
 
-export default UserDashboard;
+export default DocuMageV3;

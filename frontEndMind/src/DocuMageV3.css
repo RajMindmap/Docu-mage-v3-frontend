@@ -74,3 +74,12 @@
     margin-left: 130px;
     position: absolute;
   }
+.summery__dataDownlad{
+    position: absolute;
+    margin-top: 20rem;
+    margin-left: 2rem;
+    width: 142px;
+    background: #E3EDF7;
+    height: 42px;
+    border-radius: 12px;
+}
