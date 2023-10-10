@@ -1,0 +1,48 @@
+/* .kukur{
+    background-color: blue;
+} */
+.main__pretrained_option{
+    display: flex;
+  }
+.classi__menu_item_pretrend{
+    /* border: 1px solid red; */
+    margin-top: 12rem;
+    margin-left: 44px;
+}
+.main__dash_pageProcess {
+    background: aqua;
+    /* height: 228px; */
+    width: 18%;
+    /* padding: 20px; */
+    margin: 48px;
+    border-radius: 72px;
+}
+.sub_page__process_background{
+    height: 100px;
+    width: 100px;
+    /* border: 1px solid red; */
+    /* margin: 0px 0px 0px 0px;
+    border-radius: 50%;
+    background: #E2E6FF;
+    display: flex;
+    gap: 16px;
+    align-items: center; */
+  } 
+.page__heading{
+    text-align: left;
+    color: #8995A7;
+    font-size: 16px;
+    margin-top: 24px;
+    /* width: 100%; */
+    /* font-weight: 500; */
+    margin-left: 18px;
+  }
+.pageAmount{
+    text-align: left;
+    color: #8995A7;
+    font-size: 16px;
+    margin-top: 0px;
+    /* width: 100%; */
+    /* font-weight: 500; */
+    margin-left: 18px;
+  }

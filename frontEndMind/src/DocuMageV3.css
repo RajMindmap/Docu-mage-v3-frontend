@@ -11,19 +11,23 @@
     padding: 33px 0px 0px 27px;
 }
 .pages_purchased{
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     width: 248px;
     height: 87px;
     border-radius: 37px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(91.9deg, #EFE8FF -0.11%, #E5EEFB 100.59%);
 }
 .pages_uploaded{
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     width: 248px;
     height: 87px;
     border-radius: 37px;
     margin-top: 37px;
     cursor: pointer;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(91.9deg, #EFE8FF -0.11%, #E5EEFB 100.59%);
 }
 .pages_purchase_image{
     height: 48px;
@@ -76,10 +80,15 @@
   }
 .summery__dataDownlad{
     position: absolute;
-    margin-top: 20rem;
-    margin-left: 2rem;
+    margin-top: 12px;
+    margin-left: 64%;
     width: 142px;
     background: #E3EDF7;
-    height: 42px;
+    height: 36px;
     border-radius: 12px;
+    /* padding: 15px; */
+    /* border: none; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid white;
+    color: rgb(113, 128, 150);
 }
