@@ -7,14 +7,29 @@ import FileUploader from "./assets/file-uploader.png";
 import PurchaseIcon from "./assets/purchase-icon.png";
 import UploadIcon from "./assets/upload-icon.png";
 import RobotImage from "./assets/robot-img.png";
-// import HamburgerMenu from "./components/HamburgerMenu";
 import MsgIcon from "./assets/msg-icon.png";
 import TowerChartIcont from "./assets/Chart.png";
-import { useState } from "react";
 import DocuMageSummaryTable from "./components/DocuMageSummaryTable/DocuMageSummaryTable";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+const baseUrl = "http://localhost:5001"
 
 function DocuMageV3() {
   const [buttonCount, setButtonCount] = useState(1);
+  const [description, setDecription] = useState("")
+
+  const handleChange = (e) => {
+    setDecription(e.target.value);
+    // console.log(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(description);
+  
+  }
+
 
   const createButtons = () => {
     const buttons = [];
@@ -35,10 +50,9 @@ function DocuMageV3() {
   };
 
   return (
-    // <div className='hello'>Welcome to the DashBoard</div>
     <>
-      <Header />
 
+      <Header />
       <div
         style={{
           // border: "1px solid black",
@@ -187,7 +201,9 @@ function DocuMageV3() {
                   style={{ width: "256px", height: "132px", cursor: "pointer" }}
                 />   */}
                 <input type="file" onChange={handleFileChange} />
+
               </div>
+              <button type="button" class="btn btn-primary" id="upload-button" style={{marginTop:"10px"}}>Upload</button>
               <p
                 style={{
                   color: "#718096",
@@ -195,6 +211,7 @@ function DocuMageV3() {
                   fontWeight: "400",
                   fontSize: "13px",
                   lineHeight: "20.8px",
+                  marginTop:"10px"
                 }}
               >
                 Word Count: 489
@@ -292,20 +309,23 @@ function DocuMageV3() {
                 // marginLeft:"27px"
               }}
             >
-              <p style={{ width: "100%", fontSize: "15px", color: "#718096" }}>
-                Ask a question about the uploaded document. You can submit
-                multiple questions one after the other as well:
-              </p>
-              <input
-                type="text"
-                placeholder="Enter Your Question"
-                name="question"
-                className="form-control input_your_question"
-              // onChange={handleInput}
-              />
+              <form onSubmit={handleSubmit}>
+                <p style={{ width: "100%", fontSize: "15px", color: "#718096" }}>
+                  Ask a question about the uploaded document. You can submit
+                  multiple questions one after the other as well:
+                </p>
+                <input
+                  type="text"
+                  placeholder="Enter Your Question"
+                  name="question"
+                  className="form-control input_your_question"
+                  onChange={handleChange}
+                />
+              
               <button type="submit" className="btn w-20 ask__submit_question">
                 Ask Hercules
               </button>
+              </form>
             </div>
             <div
               className="doc_purchase_upload"
@@ -350,7 +370,7 @@ function DocuMageV3() {
             Summary
           </h2>
 
-          <div style={{ position: "absolute", width: "73%",padding:"44px 0px 10px 0px",margin:"16px" }}>
+          <div style={{ position: "absolute", width: "73%", padding: "44px 0px 10px 0px", margin: "16px" }}>
             <DocuMageSummaryTable />
 
           </div>
