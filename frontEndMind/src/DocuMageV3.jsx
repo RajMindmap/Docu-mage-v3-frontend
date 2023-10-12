@@ -11,6 +11,7 @@ import RobotImage from "./assets/robot-img.png";
 import MsgIcon from "./assets/msg-icon.png";
 import TowerChartIcont from "./assets/Chart.png";
 import { useState } from "react";
+import DocuMageSummaryTable from "./components/DocuMageSummaryTable/DocuMageSummaryTable";
 
 function DocuMageV3() {
   const [buttonCount, setButtonCount] = useState(1);
@@ -20,11 +21,17 @@ function DocuMageV3() {
     for (let i = 1; i <= buttonCount; i++) {
       buttons.push(
         <div>
-          <button key={i} style={{background: "linear-gradient(92.46deg, rgb(185, 152, 255) 0%, rgb(212, 231, 255) 120.65%)",color:"#ffff",width:"220px",height:"40px",border: "1px solid rgb(255, 255, 255)",borderRadius:"8px"}}>Session {i}</button>
+          <button key={i} style={{ background: "linear-gradient(92.46deg, rgb(185, 152, 255) 0%, rgb(212, 231, 255) 120.65%)", color: "#ffff", width: "220px", height: "40px", border: "1px solid rgb(255, 255, 255)", borderRadius: "8px" }}>Session {i}</button>
         </div>
       );
     }
     return buttons;
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    // Do something with the selected file
+    console.log('Selected file:', file);
   };
 
   return (
@@ -38,30 +45,30 @@ function DocuMageV3() {
           height: "93vh",
           width: "20%",
           float: "left",
-          marginTop:"63px"
+          marginTop: "63px"
         }}
       >
         <div className="vertical-buttons-container">
           {createButtons()}
-        
-        <button
-          onClick={() => setButtonCount(buttonCount + 1)}
-          style={{
-            float: "right",
-            marginRight: "46px",
-            background:
-            "linear-gradient(92.46deg, #B998FF 0%, #D4E7FF 120.65%)",
-            color: "#ffff",
-            width: "220px",
-            marginTop: "12px",
-            height: "40px",
-            border: "1px solid #ffff",
-            borderRadius: "8px",
-          }}
+
+          <button
+            onClick={() => setButtonCount(buttonCount + 1)}
+            style={{
+              float: "right",
+              marginRight: "46px",
+              background:
+                "linear-gradient(92.46deg, #B998FF 0%, #D4E7FF 120.65%)",
+              color: "#ffff",
+              width: "220px",
+              marginTop: "12px",
+              height: "40px",
+              border: "1px solid #ffff",
+              borderRadius: "8px",
+            }}
           >
-          New Session +
-        </button>
-      </div>
+            New Session +
+          </button>
+        </div>
 
         <div
           style={{
@@ -69,7 +76,7 @@ function DocuMageV3() {
             // width: "22%",
             height: "100%",
             background: "#ffff",
-            position:"fixed"
+            position: "fixed"
           }}
         >
           <div
@@ -99,7 +106,7 @@ function DocuMageV3() {
                 style={{ height: "30px", width: "30px", marginTop: "30px" }}
               />
             </div>
-            
+
             <div>
               <img
                 src={TowerChartIcont}
@@ -110,18 +117,18 @@ function DocuMageV3() {
           </div>
         </div>
       </div>
-{/* =============================================== */}
+      {/* =============================================== */}
       <div
         style={{
           // border: "2px solid blue",
           // height: "93vh",
           width: "80%",
           float: "left",
-          marginTop:"63px"
+          marginTop: "63px"
         }}
       >
         {/* =======================section 1 ===============> */}
-        
+
         <div
           style={{
             // border: "1px solid red",
@@ -159,7 +166,7 @@ function DocuMageV3() {
                   color: "#081735",
                 }}
               >
-                MindMap Docu Mage v3
+                MindMap Interactive AI
               </h2>
               <p
                 style={{
@@ -173,11 +180,13 @@ function DocuMageV3() {
                 Please Upload PDF or Image files
               </p>
               <div className="file__uploader">
-                <img
+                {/* upload images for figma */}
+                {/* <img
                   src={FileUploader}
                   alt=""
                   style={{ width: "256px", height: "132px", cursor: "pointer" }}
-                />
+                />   */}
+                <input type="file" onChange={handleFileChange} />
               </div>
               <p
                 style={{
@@ -292,7 +301,7 @@ function DocuMageV3() {
                 placeholder="Enter Your Question"
                 name="question"
                 className="form-control input_your_question"
-                // onChange={handleInput}
+              // onChange={handleInput}
               />
               <button type="submit" className="btn w-20 ask__submit_question">
                 Ask Hercules
@@ -340,66 +349,13 @@ function DocuMageV3() {
           >
             Summary
           </h2>
-          <table
-            className="table table-bordered table-light"
-            style={{ position: "absolute", width: "75%", marginTop: "60px" }}
-          >
-            <thead>
-              <tr>
-                <th
-                  scope="col"
-                  style={{
-                    color: "#8F95B2",
-                    height: "60px",
-                    lineHeight: "40px",
-                    background: "#EBE1FF",
-                  }}
-                >
-                  Question
-                </th>
-                <th
-                  scope="col"
-                  style={{
-                    color: "#8F95B2",
-                    height: "60px",
-                    lineHeight: "40px",
-                    background: "#EBE1FF",
-                  }}
-                >
-                  Answer
-                </th>
-                {/* <th scope="col">Handle</th> */}
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                {/* <td>@mdo</td> */}
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                {/* <td>@fat</td> */}
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                {/* <td>@fat</td> */}
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                {/* <td>@fat</td> */}
-              </tr>
 
+          <div style={{ position: "absolute", width: "73%",padding:"44px 0px 10px 0px",margin:"16px" }}>
+            <DocuMageSummaryTable />
 
-              
-            </tbody>
-          </table>
-
+          </div>
           <button className="summery__dataDownlad">Download</button>
-          
+
         </div>
       </div>
     </>
