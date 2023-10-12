@@ -12,14 +12,14 @@
 }
 .polygon__logo{
     float: left;
-    margin-top: 169px;
-    margin-left: 30px;
+    margin-top: 86px;
+    margin-left: 100px;
     width: 20px;
     height: 23px;
 }
 .main__heding__instruction{
     float: left;
-    margin-top: 190px;
+    margin-top: 100px;
     margin-left: -60px;
     width: 392px;
     height: 70px;
@@ -40,17 +40,11 @@
 }
 
 .login__container{
-    /* margin-top: 16px;
+    margin-top: 80px;
     float: left;
-    margin-left: 78px;
+    margin-left: 138px;
     display: flex;
-    column-gap: 320px; */
-    
-    margin-top: 102px;
-    float: left;
-    margin-left: 78px;
-    display: flex;
-    column-gap: 502px;
+    column-gap: 210px;
 }
 
 .proccess__key_panel{
@@ -58,7 +52,7 @@
     background-color: #B998FF;
     border-radius: 15px 0px 0px 0px;
     right: 0px;
-    width: 745px;
+    width: 796px;
 }
 .simplekey__heading{
     text-align: center;

@@ -28,6 +28,12 @@ function DocuMageV3() {
     return buttons;
   };
 
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    // Do something with the selected file
+    console.log('Selected file:', file);
+  };
+
   return (
     // <div className='hello'>Welcome to the DashBoard</div>
     <>
@@ -174,11 +180,13 @@ function DocuMageV3() {
                 Please Upload PDF or Image files
               </p>
               <div className="file__uploader">
-                <img
+                {/* upload images for figma */}
+                {/* <img
                   src={FileUploader}
                   alt=""
                   style={{ width: "256px", height: "132px", cursor: "pointer" }}
-                />
+                />   */}
+                <input type="file" onChange={handleFileChange} />
               </div>
               <p
                 style={{
@@ -342,86 +350,10 @@ function DocuMageV3() {
             Summary
           </h2>
 
-          {/* <table
-            className="table table-bordered table-light"
-            style={{ position: "absolute", width: "75%", marginTop: "60px" }}
-          >
-            <thead>
-              <tr>
-                <th
-                  scope="col"
-                  style={{
-                    color: "#8F95B2",
-                    height: "60px",
-                    lineHeight: "40px",
-                    background: "#EBE1FF",
-                  }}
-                >
-                  Question
-                </th>
-                <th
-                  scope="col"
-                  style={{
-                    color: "#8F95B2",
-                    height: "60px",
-                    lineHeight: "40px",
-                    background: "#EBE1FF",
-                  }}
-                >
-                  Answer
-                </th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-
-
-              
-            </tbody>
-          </table> */}
-          <div style={{position:"absolute"}}>
+          <div style={{ position: "absolute", width: "73%",padding:"44px 0px 10px 0px",margin:"16px" }}>
             <DocuMageSummaryTable />
 
           </div>
-
-
-
           <button className="summery__dataDownlad">Download</button>
 
         </div>
