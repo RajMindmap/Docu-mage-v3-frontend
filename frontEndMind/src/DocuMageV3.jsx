@@ -10,6 +10,7 @@ import RobotImage from "./assets/robot-img.png";
 import MsgIcon from "./assets/msg-icon.png";
 import TowerChartIcont from "./assets/Chart.png";
 import DocuMageSummaryTable from "./components/DocuMageSummaryTable/DocuMageSummaryTable";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -18,6 +19,7 @@ const baseUrl = "http://localhost:5001"
 function DocuMageV3() {
   const [buttonCount, setButtonCount] = useState(1);
   const [description, setDecription] = useState("")
+  const [file, setFile] = useState(null);
 
   const handleChange = (e) => {
     setDecription(e.target.value);
@@ -27,7 +29,7 @@ function DocuMageV3() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(description);
-  
+
   }
 
 
@@ -44,14 +46,35 @@ function DocuMageV3() {
   };
 
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
+    setFile(event.target.files[0]);
     // Do something with the selected file
     console.log('Selected file:', file);
   };
 
+  axios.defaults.withCredentials = true;
+
+  // const navigate = useNavigate();
+
+
+
+  const handleUploadSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post("http://localhost:5000/upload", file)
+      .then((res) => {
+        if (res.data.Status === "Success") {
+          // navigate("/docu-mage-v3");
+          console.log('File submitted:', file);
+        } else {
+          alert(res.data.Message);
+        }
+      })
+      .catch((err) => console.log(err));
+
+  }
+
   return (
     <>
-
       <Header />
       <div
         style={{
@@ -193,17 +216,19 @@ function DocuMageV3() {
               >
                 Please Upload PDF or Image files
               </p>
-              <div className="file__uploader">
-                {/* upload images for figma */}
-                {/* <img
+              <form onSubmit={handleUploadSubmit}>
+                <div className="file__uploader">
+                  {/* upload images for figma */}
+                  {/* <img
                   src={FileUploader}
                   alt=""
                   style={{ width: "256px", height: "132px", cursor: "pointer" }}
                 />   */}
-                <input type="file" onChange={handleFileChange} />
+                  <input type="file" onChange={handleFileChange} />
+                </div>
 
-              </div>
-              <button type="button" class="btn btn-primary" id="upload-button" style={{marginTop:"10px"}}>Upload</button>
+                <button type="submit" class="btn btn-primary" style={{ marginTop: "10px" }}>Upload</button>
+              </form>
               <p
                 style={{
                   color: "#718096",
@@ -211,7 +236,7 @@ function DocuMageV3() {
                   fontWeight: "400",
                   fontSize: "13px",
                   lineHeight: "20.8px",
-                  marginTop:"10px"
+                  marginTop: "10px"
                 }}
               >
                 Word Count: 489
@@ -321,10 +346,10 @@ function DocuMageV3() {
                   className="form-control input_your_question"
                   onChange={handleChange}
                 />
-              
-              <button type="submit" className="btn w-20 ask__submit_question">
-                Ask Hercules
-              </button>
+
+                <button type="submit" className="btn w-20 ask__submit_question">
+                  Ask Hercules
+                </button>
               </form>
             </div>
             <div
