@@ -27,7 +27,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8081", values)
+      .post("http://127.0.0.1:5000/login", values)
       .then((res) => {
         if (res.data.Status === "Success") {
           navigate("/docu-mage-v3");
@@ -37,6 +37,7 @@ function Login() {
       })
       .catch((err) => console.log(err));
   };
+
 
   return (
     <div className="align-items-center">

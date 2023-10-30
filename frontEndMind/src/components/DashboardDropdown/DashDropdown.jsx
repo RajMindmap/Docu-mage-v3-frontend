@@ -15,10 +15,14 @@ const DashDropdown = () => {
         Projects
       </button>
       <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
-        {/* Dropdown options go here */}
-        <div>Option 1</div>
-        <div>Option 2</div>
-        <div>Option 3</div>
+        <div>Invoice</div>
+        <div>Passport</div>
+        <div>Receipt</div>
+        <div>Emirates ID</div>
+        <div>CBSE 12th</div>
+        <div>PAN Card</div>
+        <div>CBSE 10th</div>
+        <div>Aadhar Card</div>
       </div>
     </div>
   );

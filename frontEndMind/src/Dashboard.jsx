@@ -7,6 +7,7 @@ import PageUploadCard from "./components/CardComponent/PageUploadCard";
 import TrendLineGraphCard from "./components/CardComponent/TrendLineGraphCard";
 import DashDropdown from "./components/DashboardDropdown/DashDropdown";
 import PagePurchaseIcon from "./assets/page-purchase-icon.png";
+import ArrowIcon from "./assets/arrow-icon.png";
 
 const Dashboard = () => {
   return (
@@ -154,7 +155,7 @@ const Dashboard = () => {
                     <div className="sub_parcent_title">Lorem</div>
                   </div>
                 </div>
-                <h2 className="page__heading">Accuracy</h2>
+                <h2 className="page__heading" style={{marginLeft:"20px"}}>Accuracy</h2>
                 <h2 className="pageAmount">0000</h2>
               </div>
             </div>
@@ -176,17 +177,14 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <h2 className="page__heading">Straight-Through Processing</h2>
-                <h2 className="pageAmount">0000</h2>
+                <h2 className="pageAmount" style={{marginLeft:"60px"}}>0000</h2>
               </div>
             </div>
-
-
-{/* 
-            <div className="main__dash_pageUpload"></div>
-            <div className="main__dash_Accuracy"></div>
-            <div className="main__dash_straightProcessing"></div> */}
-          </div>
+          </div> 
         </div>
+        <button type="submit" className="btn login__button" style={{color:"white",float:"inline-end",marginRight:"3%",marginTop:"42px"}}>
+           <span><img src={ArrowIcon} alt="" /></span> Get Started
+          </button>
       </div>
     </>
   );

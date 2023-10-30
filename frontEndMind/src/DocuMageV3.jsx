@@ -12,7 +12,7 @@ import TowerChartIcont from "./assets/Chart.png";
 import DocuMageSummaryTable from "./components/DocuMageSummaryTable/DocuMageSummaryTable";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const baseUrl = "http://localhost:5001"
 
@@ -20,6 +20,11 @@ function DocuMageV3() {
   const [buttonCount, setButtonCount] = useState(1);
   const [description, setDecription] = useState("")
   const [file, setFile] = useState(null);
+  const [loading, setLoading] = useState(false);  // Loading state
+  const [question, setQuestion] = useState('');
+
+  const [data, setData] = useState([])
+  const inputRef = useRef(null);
 
   const handleChange = (e) => {
     setDecription(e.target.value);
@@ -45,33 +50,59 @@ function DocuMageV3() {
     return buttons;
   };
 
+
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
     // Do something with the selected file
-    console.log('Selected file:', file);
+    // console.log('Selected file:', file);
   };
 
   axios.defaults.withCredentials = true;
-
   // const navigate = useNavigate();
-
-
-
   const handleUploadSubmit = (event) => {
     event.preventDefault();
+    const formData = new FormData();
+    setLoading(true);
+    formData.append('file', file);
     axios
-      .post("http://localhost:5000/upload", file)
+      .post("http://localhost:5000/upload", formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
       .then((res) => {
         if (res.data.Status === "Success") {
           // navigate("/docu-mage-v3");
           console.log('File submitted:', file);
         } else {
-          alert(res.data.Message);
+          setLoading(false);
+          alert("while uploading show uplaoding once done says Upload Successful", res.data.Message);
         }
       })
       .catch((err) => console.log(err));
+  };
 
-  }
+  const handleAskSubmit = (event) => {
+    event.preventDefault();
+    axios.post("http://localhost:5000/query_hercules", { 'question': question })
+      .then(response => {
+        // Handle success
+        setData(response.data)
+        console.log("raj gautam data...", response);
+         inputRef.current.value = "";
+       
+      })
+      .catch(error => {
+        // Handle error
+        console.error(error);
+      });
+  };
+
+
+
+  const handleaskChange = (event) => {
+    setQuestion(event.target.value);
+  };
 
   return (
     <>
@@ -229,6 +260,8 @@ function DocuMageV3() {
 
                 <button type="submit" class="btn btn-primary" style={{ marginTop: "10px" }}>Upload</button>
               </form>
+
+              {loading && <div className="loader">Data Uploading... </div>}
               <p
                 style={{
                   color: "#718096",
@@ -334,7 +367,7 @@ function DocuMageV3() {
                 // marginLeft:"27px"
               }}
             >
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleAskSubmit}>
                 <p style={{ width: "100%", fontSize: "15px", color: "#718096" }}>
                   Ask a question about the uploaded document. You can submit
                   multiple questions one after the other as well:
@@ -344,7 +377,8 @@ function DocuMageV3() {
                   placeholder="Enter Your Question"
                   name="question"
                   className="form-control input_your_question"
-                  onChange={handleChange}
+                  onChange={handleaskChange}
+                  ref={inputRef}
                 />
 
                 <button type="submit" className="btn w-20 ask__submit_question">
@@ -396,9 +430,48 @@ function DocuMageV3() {
           </h2>
 
           <div style={{ position: "absolute", width: "73%", padding: "44px 0px 10px 0px", margin: "16px" }}>
-            <DocuMageSummaryTable />
-
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Question</th>
+                  <th>Answer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{data?.question}</td>
+                  <td>{data?.answer}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+
+          {/* <div className="container">
+            <div className="mt-3">
+              <h3>fetch data from the appi</h3>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Question</th>
+                    <th>Answer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    data.map((user,index) =>{
+                      return(
+                        <tr key={index}>
+                          <td>{user.question}</td>
+                          <td>{user.answer}</td>
+                        </tr>
+                      )
+                    })
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div> */}
+
           <button className="summery__dataDownlad">Download</button>
 
         </div>

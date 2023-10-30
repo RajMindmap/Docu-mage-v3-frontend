@@ -3,46 +3,66 @@
 } */
 .main__pretrained_option{
     display: flex;
+    margin-left: 36px;
   }
 .classi__menu_item_pretrend{
     /* border: 1px solid red; */
-    margin-top: 12rem;
+    margin-top: 6rem;
     margin-left: 44px;
 }
-.main__dash_pageProcess {
-    background: aqua;
-    /* height: 228px; */
-    width: 18%;
-    /* padding: 20px; */
-    margin: 48px;
-    border-radius: 72px;
+.sub_page__process_Invoice_background{
+    background: #E2E6FF !important;
+    border-radius: 60px 60px 0px 0px !important;
+    /* width: 100%; */
 }
-.sub_page__process_background{
-    height: 100px;
-    width: 100px;
-    /* border: 1px solid red; */
-    /* margin: 0px 0px 0px 0px;
-    border-radius: 50%;
-    background: #E2E6FF;
-    display: flex;
-    gap: 16px;
-    align-items: center; */
-  } 
-.page__heading{
-    text-align: left;
-    color: #8995A7;
-    font-size: 16px;
-    margin-top: 24px;
-    /* width: 100%; */
-    /* font-weight: 500; */
-    margin-left: 18px;
-  }
-.pageAmount{
-    text-align: left;
-    color: #8995A7;
-    font-size: 16px;
-    margin-top: 0px;
-    /* width: 100%; */
-    /* font-weight: 500; */
-    margin-left: 18px;
-  }
+
+.invoice_heading{
+  /* color: #8995A7; */
+  font-size: 20px;
+  /* margin-top: 24px; */
+  font-weight: 600; 
+} 
+
+.invoice_pageAmount{
+  color: #8995A7;
+  font-size: 12px;
+  font-weight: bold;
+
+}
+
+h2 {
+  font-size: 72px;
+  background: linear-gradient(90deg, #8852FA 0%, #61A0FF 33.5%);  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stepper_navigationBar{
+  /* float: left; */
+  /* margin-top: 12rem; */
+  margin-left: 44px;
+  width: 92%;
+  background: #fff;
+  border-radius: 26px;
+  height: 44px;
+  display: flex;
+}
+
+.stepperNavigation_title{
+  font-size: 16px;
+  background: linear-gradient(270.07deg, #B998FF 0.04%, #ACCDFF 99.13%);
+  height: 44px;
+  border-radius: 26px;
+  color:#fff;
+  padding: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modelConf__title{
+  margin-left: 96px;
+  margin-top: 10px;
+  color: #9384B2;
+  font-weight: 600;
+  cursor: pointer;
+  
+}

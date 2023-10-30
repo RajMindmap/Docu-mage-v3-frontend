@@ -92,3 +92,7 @@
     border: 1px solid white;
     color: rgb(113, 128, 150);
 }
+.loader{
+    margin-top: 10px;
+    /* background-color: #B998FF; */
+}

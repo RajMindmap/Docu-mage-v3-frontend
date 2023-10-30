@@ -1,0 +1,58 @@
+.stepper-container {
+    /* padding: 20px; */
+    max-width: 98%;
+    margin: 62px 14px 0px auto;
+    /* border: 1px solid #ccc; */
+    padding: 30px;
+  }
+  
+  .step-indicator {
+    display: flex;
+    align-items: center;
+  }
+  .step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    /* border: 1px solid black; */
+  }
+  
+  .step span {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .step.active {
+    /* background: blueviolet; */
+    color: #fff;
+    background-image: url('../../assets/round-select.png');
+    width: 40px;
+    height: 40px;
+    
+  }
+  
+  .line {
+    flex: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 5px;
+  }
+  
+  .step-labels{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .step-label.bold {
+    font-weight: bold;
+  }
+  
+  .line.active {
+    background-color: #007bff;
+  }
