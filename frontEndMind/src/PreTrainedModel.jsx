@@ -20,17 +20,7 @@ export const PreTrainedModel = () => {
             <div style={{ border: "3px solid red", height: "100vh", width: "100", margin: "0px", padding: "0px" }}>
                 <div style={{ border: "2px solid blue", height: "99vh", width: "20%", float: "left" }}></div>
 
-                <div style={{ border: "1px solid blue", height: "99vh", width: "80%", float: "left" }}>
-
-                    <PretrendStepper />
-
-                    {/* <div className='stepper_navigationBar'>
-                        <p className='stepperNavigation_title'>Pre Trained Models</p>
-                        <p className='modelConf__title'>Model Configuration</p>
-                        <p className='modelConf__title'>Inbound Integrations</p>
-                        <p className='modelConf__title'>Outbound Integrations</p>
-                        <p className='modelConf__title'>Initiate Project</p>
-                    </div> */}
+                <div style={{ border: "1px solid blue", height: "99vh", width: "80%", float: "left" }}
 
                     <div className="classi__menu_item_pretrend">
                         <nav className="menu">
@@ -79,29 +69,8 @@ export const PreTrainedModel = () => {
                             marginLeft: "8%"
                         }}
                     >
-                        <div
-                            className="main__pretrained_option"
-
-                        >
-                            <Card style={{ width: '14rem', padding: "0px", margin: "32px" }}>
-                                <Card.Img variant="top" src={InvoicePretrained} style={{ height: "94px", width: "80%", marginLeft: "38px" }} />
-                                <Card.Body style={{ background: "#fff ", borderRadius: "0px 0px 45px 45px", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
-                                    <Card.Title><h2 className="invoice_heading">Invoice</h2></Card.Title>
-                                    <Card.Text>
-                                        <h3 className="invoice_pageAmount">Lorem Ipsum is a dummy text</h3>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '14rem', padding: "0px", margin: "32px" }}>
-                                <Card.Img variant="top" src={PassportImg} style={{ height: "94px", width: "80%", marginLeft: "42px" }} />
-                                <Card.Body style={{ background: "#fff ", borderRadius: "0px 0px 45px 45px", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
-                                    <Card.Title><h2 className="invoice_heading">Passport</h2></Card.Title>
-                                    <Card.Text>
-                                        <h3 className="invoice_pageAmount">Lorem Ipsum is a dummy text</h3>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
+                        
+                           
 
                             <Card style={{ width: '14rem', padding: "0px", margin: "32px" }}>
                                 <Card.Img variant="top" src={RecieptPretrend} style={{ height: "94px", width: "80%", marginLeft: "18px" }} />
