@@ -23,9 +23,7 @@ function Home() {
       <div
         className="login__container"
       >
-        <div className="mylogin__panel">
-          <Login />
-        </div>
+        
 
         <div className="proccess__key_panel">
           <div className="search__boy_logo">
@@ -37,7 +35,7 @@ function Home() {
               <span>Process Documents with no</span> <br />
               <span>hustle and headache</span>
             </p>
-            <img src={CarouselIndicator} alt="image found" />
+           
           </div>
         </div>
 
