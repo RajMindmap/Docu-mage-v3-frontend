@@ -13,16 +13,16 @@ const HamburgerMenu = () => {
          <div className="menu_msg_icon"><img src={MsgIcon} alt="" /></div>
          <div className="menu_msg_dash_label">Dashboard</div> 
         </a>
-        <a className="menu-item" href="/pre-trained-models" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
+        <a className="menu-itm" href="/pre-trained-models" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
          <div className="menu_msg_icon"><img src={TowerChartIcont} alt="" /></div>
          <div className="menu_msg_dash_label">Pre-Trained Models</div> 
         </a>
-        <a className="menu-item" href="/my-projects" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
+        <a className="meanu-item" href="/my-projects" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
          <div className="menu_msg_icon"><img src={TowerChartIcont} alt="" /></div>
          <div className="menu_msg_dash_label">My Projects</div> 
         </a>
         <a className="menu-item" href="/integrations" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
-         <div className="menu_msg_icon"><img src={TowerChartIcont} alt="" /></div>
+         <div className="menu_msg_icon"><img src={TowerChartIont} alt="" /></div>
          <div className="menu_msg_dash_label">Integrations</div> 
         </a>
         <a className="menu-item" href="/performance-report" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
@@ -31,9 +31,9 @@ const HamburgerMenu = () => {
         </a>
       <hr />
       <h4 style={{ textAlign: "start",marginTop:"40px" }}>Administration</h4>
-      <a className="menu-item" href="/user-management" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
+      <a className="menu-item" href="/user-managment" style={{ textAlign: "start",marginTop:'24px',textDecoration:"none",color:"#8F95B2",fontWeight:"600",fontSize:"18px",lineHeight:"20px",display:"flex",columnGap:"12px" }}>
          <div className="menu_msg_icon"><img src={MsgIcon} alt="" /></div>
-         <div className="menu_msg_dash_label">User Management</div> 
+         <div clssName="menu_msg_dash_label">User Management</div> 
         </a>
     </Menu>
   );
